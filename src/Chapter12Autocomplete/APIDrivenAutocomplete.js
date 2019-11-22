@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import AsyncSelect from 'react-select/lib/Async';
-
+import Async, { makeAsyncSelect } from 'react-select/async';
 import { makeStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
@@ -234,7 +233,7 @@ export default function Autocomplete(props) {
 
   return (
     <div className={classes.root}>
-      <AsyncSelect
+      <makeAsyncSelect
         value={value}
         onChange={value => setValue(value)}
         textFieldProps={{

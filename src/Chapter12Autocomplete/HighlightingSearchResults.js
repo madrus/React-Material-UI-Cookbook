@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import AsyncSelect from 'react-select/lib/Async';
+import Async, { makeAsyncSelect } from 'react-select/async';
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
 
@@ -250,7 +250,7 @@ export default function Autocomplete(props) {
 
   return (
     <div className={classes.root}>
-      <AsyncSelect
+      <makeAsyncSelect
         value={value}
         onChange={value => setValue(value)}
         textFieldProps={{
