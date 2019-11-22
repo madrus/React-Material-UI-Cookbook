@@ -58,11 +58,11 @@
     "@babel/preset-react": "^7.7.0",
     "@babel/register": "7.7.0",
     "@babel/runtime": "7.7.2",
-    "acorn": "^6.1.1",
+    "acorn": "^7.1.0",
     "babel-loader": "^8.0.6"
   },
   "prettier": {
-    "printWidth": 70,
+    "printWidth": 80,
     "singleQuote": true
   }
 }
