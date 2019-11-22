@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import Async, { makeAsyncSelect } from 'react-select/async';
+// import Async, { makeAsyncSelect } from 'react-select/async';
 import { makeStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
@@ -55,9 +55,7 @@ const someAPI = searchText =>
         teams.filter(
           team =>
             searchText &&
-            team.label
-              .toLowerCase()
-              .includes(searchText.toLowerCase())
+            team.label.toLowerCase().includes(searchText.toLowerCase())
         )
       );
     }, 1000);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import Async, { makeAsyncSelect } from 'react-select/async';
+// import Async, { makeAsyncSelect } from 'react-select/async';
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
 
@@ -55,9 +55,7 @@ const someAPI = searchText =>
       ];
 
       resolve(
-        teams.filter(
-          team => searchText && match(team.label, searchText).length
-        )
+        teams.filter(team => searchText && match(team.label, searchText).length)
       );
     }, 1000);
   });
@@ -164,10 +162,7 @@ const Option = props => (
     }}
     {...props.innerProps}
   >
-    <ValueLabel
-      label={props.children}
-      search={props.selectProps.inputValue}
-    />
+    <ValueLabel label={props.children} search={props.selectProps.inputValue} />
   </MenuItem>
 );
 
